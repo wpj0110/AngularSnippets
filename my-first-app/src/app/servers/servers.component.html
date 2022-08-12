@@ -1,3 +1,32 @@
 <p>servers works!</p>
-<app-server></app-server>
-<app-server></app-server>
+
+<p>Input Example Below</p>
+<input type="text" class="form-control" (input)="onUpdateServerName($event)">
+<p>Two-Way Binding Example Below</p>
+<input type="text" class="form-control" [(ngModel)]="serverName">
+<p> Because of onUpdateServerName($event):  {{ serverName }}</p>
+<p *ngIf="serverCreated; else noServer"> Using ngIf to Output Data Conditionally when condition is True: {{ serverName }}</p>
+<ng-template #noServer>
+    <p>No server was created! Add Server and this will change (using ng-template)</p>
+</ng-template>
+<p>Clicking Example</p>
+<button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add Server</button>
+<p>{{ serverCreationStatus }}</p>
+<p>This is String Interpolation: {{ allowNewServer }}. The line below is using property binding.</p>
+<p [innerText]="allowNewServer"></p> <!--This is property biding-->
+<h3>Dynamic CSS or Classes with [ngStyle], [ngClass]. Just configure the condition. The paragraphs below are added via the *ngFor to iterate through an array. Try adding more servers</h3>
+<app-server *ngFor="let server of servers"></app-server>
+<h1>Assignment 2 Below</h1>
+<input type="text" class="form-control" (input)="onUpdateUserName($event)">
+<p>Two-Way Binding Example Below</p>
+<input type="text" class="form-control" [(ngModel)]="userName">
+<p> Username is: {{ userName }} </p>
+<button class="btn btn-primary" [disabled]="userName === ''" (click)="onResetUsername()">Reset Username</button>
+<hr>
+<h1>Assignment 3</h1>
+<button class="btn btn-primary" (click)="showParagraph()">Display Details</button>
+<p *ngIf="isShowParagraph">Sample Paragraph Is Currently Shown</p>
+<p>Logs: Try Displaying 5 times. If it's displayed 5 times, the color is changed because of [ngStyle], and the class .white-text is used when the condition is met for [ngClass]</p>
+<a href="https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/6655944#questions/9591278" target="_blank" rel="noopener">Bonus Solution Here</a>
+<div *ngFor="let log of logs" [ngStyle]="{backgroundColor: log >= 5 ? 'blue': 'transparent'}" [ngClass]="{'white-text': log >= 5}"> {{ log }}</div>
+<!-- <p [ngStyle]="{backgroundColor: item >= 5 ? 'blue': 'transparent'}" *ngFor="let log of logs">{{ log }}</p> -->
