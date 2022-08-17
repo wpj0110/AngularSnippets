@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'assignment4';
+  appNum = 0;
+
+  onStartClick(appData: {currentNumber : number}) {
+    this.appNum = appData.currentNumber;
+  }
+
+  onStopClick() {
+
+  }
 }
