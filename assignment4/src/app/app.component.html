@@ -1,4 +1,8 @@
-<app-game-control (gameStart)="onStartClick()" (gameStop)="onStopClick()"></app-game-control>
-<p>{{ this.appNum }}</p>
-<app-even></app-even>
-<app-odd></app-odd>
+<p>Assignment 4. This is my solution. Misunderstood it a bit for the component creation, but I get the point.</p>
+<a href="https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/practice/272#questions/6361612">Here is Udemy link of that assignment</a>
+<div>
+  <app-game-control (gameStart)="onStartClick()" (gameStop)="onStopClick()"></app-game-control>
+  <p>{{ this.appNum }}</p>
+  <app-even *ngIf="this.appNum % 2 == 0"></app-even>
+  <app-odd *ngIf="this.appNum % 2 != 0"></app-odd>
+</div>
