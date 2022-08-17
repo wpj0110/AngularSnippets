@@ -1,4 +1,4 @@
-<app-game-control (gameStart)="onStartClick($event)"></app-game-control>
+<app-game-control (gameStart)="onStartClick()" (gameStop)="onStopClick()"></app-game-control>
 <p>{{ this.appNum }}</p>
 <app-even></app-even>
 <app-odd></app-odd>

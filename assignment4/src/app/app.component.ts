@@ -7,12 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   appNum = 0;
+  temp: any;
 
-  onStartClick(appData: {currentNumber : number}) {
-    this.appNum = appData.currentNumber;
+  onStartClick() {
+    //this.appNum = appData.currentNumber;
+    //this.appNum += 1;
+    this.temp = setInterval(() => this.appNum += 1,1000);
   }
 
   onStopClick() {
-
+    console.log("onStopClick");
+    clearInterval(this.temp);
   }
 }
