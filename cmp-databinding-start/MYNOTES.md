@@ -8,7 +8,7 @@ You can also make aliases.
      srvElement must also be the property name to be used in app.component.html
 
 Passing information from the child to the parent component example:. @Output will be used here.
----goes like this: child.component.ts -> parent.component.html -> parent.component.ts
+---goes like this: child.component.ts -> child.component.html -> parent.component.html -> parent.component.ts
 ---cockpit component to app component
 ---you need methods in cockpit.component.ts paired with your app.component.ts.
 -----the methods in app.component.ts will be used as event listeners and take the information.
