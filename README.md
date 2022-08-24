@@ -72,6 +72,9 @@ Could use EventEmitter, but subjects are an alternative
 
 
 ## Section 14 Forms 
+
+### Template Driven Approach 
+
 </br> In summary this reminds me of the forms that everyone uses when signing up a new account
 
 It will all be in JSON
@@ -88,5 +91,30 @@ It will all be in JSON
 
 ### Radio Buttons
 </br> https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/6656486#questions it's just like any other forms/inputs.
+</br> setValue vs patchValue for forms
 
+### Reactive Approach  
+https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/6656500#questions
+</br> ReactiveFormsModule
+</br> Everything here seems simpler so I recommend this way
+</br> You can use validators in here
+</br> Dynamic Buttons Example  https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/6656514#questions
+</br> Dynamically Added Buttons sohuld also retain functionalities corresponding to it
+</br> Could also use validators
+</br> Asynchronous data https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/6656522#questions
+
+## Section 17 Pipes 
+
+https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/6656566#questions
+
+Main Purpose: To transform the output
+</br> Order matters for pipes
+</br> You can make a custom pipe by making an interface for it https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/6656578#questions
+</br> You can generate a pipe with the command "ng generate pipe nameOfPipe" https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/6656584#questions
+</br> Pure and Impure Pipes...  https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/6656586#questions
+</br> Async data.... review what is a promise!!! https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/6656588#questions
+
+## Section 18 Making Http Requests
+
+https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/14466322#questions
 
