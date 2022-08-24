@@ -1,0 +1,44 @@
+<form>
+  <div class="forms_container">
+    <div class="forms_currency">
+      <label for="from">From</label>
+      <input
+        id="from"
+        type="number"
+        onkeypress="return event.charCode >= 48"
+        name="currency_from"
+        value="{{ fromAmount }}"
+        min="0"
+        step="0.01"
+        [ngModel]="fromAmount"
+        (ngModelChange)="onConvertCurrency($event)"
+      >
+      <mat-form-field appearance="fill">
+        <mat-label>Currencies</mat-label>
+        <mat-select (selectionChange)="onChooseCurrency($event)">
+          <mat-option *ngFor="let currency of currencies" [value]="currency">{{ currency }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="forms_currency">
+      <label for="to">To</label>
+      <input
+        id="to"
+        type="number"
+        onkeypress="return event.charCode >= 48"
+        name="currency_to"
+        value="{{ toAmount }}"
+        min="0.00"
+        step="0.01"
+        [ngModel]="toAmount"
+        (ngModelChange)="onConvertCurrency($event)"
+      >
+      <mat-form-field appearance="fill">
+        <mat-label>Currencies</mat-label>
+        <mat-select (selectionChange)="onChooseCurrency($event)">
+          <mat-option *ngFor="let currency of currencies" [value]="currency">{{ currency }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+</form>

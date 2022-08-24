@@ -1,0 +1,8 @@
+.forms_container {
+  display: flex;
+  justify-content: center;
+}
+
+.forms_currency {
+  margin-right: 20px;
+}
