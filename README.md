@@ -47,3 +47,46 @@ css Styling: routerLinkActive and routerLinkActiveOptions know when to use route
 Routes and RouterModule in module.ts
 
 Good idea to use "/" in your paths to say that you refer to that absolute path. No "/" means relative path
+
+## Section 13 Observables
+
+rxjs (install this first) 
+</br> use interval from rxjs
+</br> possible to have multiple observables at the same time. This is bad. Use Subscription from rxjs for this issue
+</br> Use ngonDestroy with this https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/14466292#questions you will unsubscribe here
+</br> Custom Observables are possible. This is an alternative
+</br> You can give an error() for such cases and it will unsubscribe for you
+</br> You can also use complete(). It will also unsubscribe on its own
+</br> You rarely build your own observables since there's already a ton that are built-in
+</br> Operators are sometimes used in between observables. Operators are simply just logic in between. rxjs/operators <-- this import
+</br> Pipelining for operators is also a thing. Could do this for transforming data for example.
+
+### Subjects
+
+Could use EventEmitter, but subjects are an alternative
+</br>  Subject is imported from rxjs
+</br> You can call next() here from the outside, such as in a service. Services communicating to one another, Subject can be used for this.
+</br> Replacing EventEmitters with Subjects https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/14466312#questions
+</br> Instead of emit(), use next() for subjects
+</br> make sure to store that subscritption in a variable type Subscription so you can destroy this later/
+
+
+## Section 14 Forms 
+</br> In summary this reminds me of the forms that everyone uses when signing up a new account
+
+It will all be in JSON
+</br> Template Driven or Reactive
+</br> You can use ngModel again, especially for two way binding
+</br> in the form tag, use ngSubmit
+</br> #localPropertyName="ngForm" means that you will have immediate access to the object created by the form
+</br> You can see the properties of the form you currently have. Very useful if there are particular  stuff that you want to take advatnage of 
+</br> Alternative way to the form is by using @ViewChild https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/6656468#questions
+</br> you can add "required" in the input tag.... means the input has to be filled
+</br> You can see its validity through the valid property for example inside the form
+</br> Sample of checking the validity through here... https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/6656472#questions
+</br> You can add extra data in the form... https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/6656484#questions
+
+### Radio Buttons
+</br> https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/6656486#questions it's just like any other forms/inputs.
+
+
