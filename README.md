@@ -118,3 +118,16 @@ Main Purpose: To transform the output
 
 https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/14466322#questions
 
+## Section 20 Authentication & Route Protection in Angular
+
+https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/14466410#questions \
+Make an Authorization Component \
+
+
+## Section 21 Dynamic Components
+
+ngIf is already an example /
+
+## Section 22 Modules
+
+you need to declare parent modules for child modules \
