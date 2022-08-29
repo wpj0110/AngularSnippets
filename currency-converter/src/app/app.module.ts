@@ -10,6 +10,7 @@ import {RouterModule} from "@angular/router";
 import {FormsModule} from "@angular/forms";
 import {MatSelectModule} from "@angular/material/select";
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { GameComponent } from './game/game.component';
 
 @NgModule({
   declarations: [
@@ -17,13 +18,15 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
     HeaderComponent,
     CurrencyConvertComponent,
     CurrencyChartComponent,
-    AboutComponent
+    AboutComponent,
+    GameComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([
       {path: 'currency-convert', component: CurrencyConvertComponent},
       {path: 'currency-chart', component: CurrencyChartComponent},
+      {path: 'game', component: GameComponent},
       {path: 'about', component: AboutComponent},
       {path: '', redirectTo: '/currency-convert', pathMatch: 'full'},
       {path: '**', component: CurrencyConvertComponent},

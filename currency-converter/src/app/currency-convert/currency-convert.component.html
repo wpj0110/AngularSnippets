@@ -14,8 +14,8 @@
         (ngModelChange)="onConvertCurrency($event)"
       >
       <mat-form-field appearance="fill">
-        <mat-label>Currencies</mat-label>
-        <mat-select (selectionChange)="onChooseCurrency($event)">
+        <!-- <mat-label>Currencies</mat-label> -->
+        <mat-select (selectionChange)="onChooseFromCurrency($event)" [(value)]="fromCurrency">
           <mat-option *ngFor="let currency of currencies" [value]="currency">{{ currency }}</mat-option>
         </mat-select>
       </mat-form-field>
@@ -34,11 +34,13 @@
         (ngModelChange)="onConvertCurrency($event)"
       >
       <mat-form-field appearance="fill">
-        <mat-label>Currencies</mat-label>
-        <mat-select (selectionChange)="onChooseCurrency($event)">
+        <!-- <mat-label>Currencies</mat-label> -->
+        <mat-select (selectionChange)="onChooseToCurrency($event)" [(value)]="toCurrency">
           <mat-option *ngFor="let currency of currencies" [value]="currency">{{ currency }}</mat-option>
         </mat-select>
       </mat-form-field>
     </div>
   </div>
 </form>
+<h1>References:</h1>
+<a href="https://v6.material.angular.io/components/select/overview">mat-form-field, mat-select, and mat-option</a>

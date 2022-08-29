@@ -3,6 +3,7 @@
   text-align: center;
 }
 
+/*
 .header a {
   display: inline-flex;
   padding: 10px;
@@ -19,13 +20,30 @@
   margin: 7px;
   border: 5px solid black;
 }
+*/
 
 a {
+  display: inline-flex;
+  padding: 10px;
+  margin: 10px;
+  font-size: 20px;
+  font-family: "Courier New", "Arial", "Helvetica";
+  font-weight: bold;
+  background: aqua;
+  border-radius: 10%;
+  border: 2px solid black;
   color:inherit;
   text-decoration: inherit;
+  
+}
+
+a:hover {
+  background: yellow;
 }
 
 .activeButton {
   background: red;
+  margin: 7px;
+  border: 5px solid black;
 }
 

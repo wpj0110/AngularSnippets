@@ -7,6 +7,8 @@ import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 })
 export class CurrencyConvertComponent implements OnInit {
   currencies: any[] = ['USD', 'EUR', 'JPY', 'PHP', 'CHY', 'LYD'];
+  fromCurrency: string = 'USD';
+  toCurrency: string = 'EUR';
 
   fromAmount: number = 0;
   toAmount: number = 0;
@@ -17,13 +19,17 @@ export class CurrencyConvertComponent implements OnInit {
   }
 
   onConvertCurrency(amount: number) {
-    //this.fromAmount = this.fromInputRef.nativeElement.valueOf();
-    //this.toAmount = this.toInputRef.nativeElement.valueOf();
     this.fromAmount = amount;
     this.toAmount = amount;
   }
 
-  onChooseCurrency(currencyChoice: any) {
+  onChooseFromCurrency(currencyChoice: any) {
     console.log(currencyChoice);
+    //this.fromCurrency = currencyChoice;
+  }
+
+  onChooseToCurrency(currencyChoice: any) {
+    console.log(currencyChoice);
+    //this.toCurrency = currencyChoice;
   }
 }
