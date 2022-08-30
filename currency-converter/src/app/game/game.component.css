@@ -1,0 +1,36 @@
+.row-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.row {
+    display: inline-flex;
+    justify-content: center;
+    align-items:center;
+    height: 150px;
+    width: 150px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: black;
+}
+
+.scoreboard {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.reset {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 30px;
+}
+
+.reset:hover {
+    cursor: pointer;
+    background-color: yellowgreen;
+}
