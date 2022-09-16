@@ -11,6 +11,7 @@ import {FormsModule} from "@angular/forms";
 import {MatSelectModule} from "@angular/material/select";
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { GameComponent } from './game/game.component';
+import {MatRadioModule} from "@angular/material/radio";
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { GameComponent } from './game/game.component';
     ]),
     FormsModule,
     MatSelectModule,
-    NoopAnimationsModule
+    NoopAnimationsModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]

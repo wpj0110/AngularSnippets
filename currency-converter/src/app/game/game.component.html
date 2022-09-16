@@ -1,39 +1,70 @@
-<div 
-class="row-container">
-    <div class="row" 
-        *ngFor="let element of row1; let i = index"
-        (click)="boxClick(i, row1)"> 
-        <div *ngIf="row1[i] === 0">0</div>
-        <div *ngIf="row1[i] === 1">1</div>
-    </div>
-</div>
-<div 
-class="row-container">
-    <div class="row" 
-        *ngFor="let element of row2; let i = index"
-        (click)="boxClick(i, row2)"> 
-        <div *ngIf="row2[i] === 0">0</div>
-        <div *ngIf="row2[i] === 1">1</div>
-    </div>
-</div>
-<div class="row-container">
-    <div class="row" 
-        *ngFor="let element of row3; let i = index"
-        (click)="boxClick(i, row3)"> 
-        <div *ngIf="row3[i] === 0">0</div>
-        <div *ngIf="row3[i] === 1">1</div>
-    </div>
-</div>
-<div>
-    
-</div>
-<div class="scoreboard">
-    <div class="reset"
-        (click)="resetGame()">Reset</div>
+<div class="container-horizontal-flexbox">
+  <div class="scoreboard">
+    <div class="reset" (click)="resetGame()">Reset Board</div>
     <h1>Scores:</h1>
     <div>Player: {{ playerScore }}</div>
     <div>Robot: {{ robotScore }}</div>
-    <div>Total Matches: {{ playerScore + robotScore }}</div>
+    <div>Draws: {{ draw }}</div>
+    <div>Total Matches: {{ playerScore + robotScore + draw}}</div>
+    <div class="reset" (click)="resetScore()">Reset Scores</div>
+  </div>
+  <div [ngStyle]="gameFinished === true ? {'background-color' : 'gray'} : {}">
+    <div class="row-container">
+      <div class="row"
+           *ngFor="let element of row1; let i = index"
+           (click)="boxClick(i, row1)">
+        <div *ngIf="row1[i] === 0"
+          [ngClass]="'circle'">
+        </div>
+        <div *ngIf="row1[i] === 1"
+             [ngClass]="'ekis'">
+          X
+        </div>
+      </div>
+    </div>
+    <div
+      class="row-container">
+      <div class="row"
+           [ngStyle]="gameFinished === true ? {'background-color' : 'gray'} : {}"
+           *ngFor="let element of row2; let i = index"
+           (click)="boxClick(i, row2)">
+        <div *ngIf="row2[i] === 0"
+             [ngClass]="'circle'">
+        </div>
+        <div *ngIf="row2[i] === 1"
+             [ngClass]="'ekis'">
+          X
+        </div>
+      </div>
+    </div>
+    <div class="row-container">
+      <div class="row"
+           *ngFor="let element of row3; let i = index"
+           (click)="boxClick(i, row3)">
+        <div *ngIf="row3[i] === 0"
+             [ngClass]="'circle'">
+        </div>
+        <div *ngIf="row3[i] === 1"
+             [ngClass]="'ekis'">
+          X
+        </div>
+      </div>
+    </div>
+    <div>
+    </div>
+  </div>
+  <div class="robot-radios">
+    <mat-radio-group [(ngModel)] = isRobotWorking>
+      Play Against Robot?
+      <br>
+      <mat-radio-button [value]="true">Yes</mat-radio-button>
+      <mat-radio-button [value]=false>No</mat-radio-button>
+    </mat-radio-group>
+    <div>
+      Robot Status: {{ isRobotWorking === true ? "Yes" : "No"}}
+    </div>
+  </div>
 </div>
+
 <a href="https://stackoverflow.com/questions/44286941/give-active-class-onclick-in-ngfor-angular-2">active class onclick ngFor</a>
 
