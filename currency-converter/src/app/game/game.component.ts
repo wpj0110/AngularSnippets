@@ -55,12 +55,14 @@ export class GameComponent implements OnInit {
     this.row2 = [2,2,2];
     this.row3 = [2,2,2];
     this.gameFinished = false;
+    this.choice = 1;
   }
 
   resetScore() {
     this.playerScore = 0;
     this.robotScore = 0;
     this.draw = 0;
+    this.choice = 1;
   }
 
   scorer() {
@@ -113,8 +115,10 @@ export class GameComponent implements OnInit {
   columnMatcher(currIdx : number) { //helper function to avoid bloated code
     if ((this.row1[currIdx] === 2) || (this.row2[currIdx] === 2) || (this.row3[currIdx] === 2)) {
       return false;
+    } else if ((this.row1[currIdx] === 0) && (this.row2[currIdx] === 0) && (this.row3[currIdx] === 0)){
+      return true;
     } else {
-    return (this.row1[currIdx] && this.row2[currIdx] && this.row3[currIdx])
+      return (this.row1[currIdx] && this.row2[currIdx] && this.row3[currIdx]);
     }
   }
 

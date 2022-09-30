@@ -1,41 +1,39 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+//import { StoreModule} from "@ngrx/store";
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { CurrencyConvertComponent } from './currency-convert/currency-convert.component';
-import { CurrencyChartComponent } from './currency-chart/currency-chart.component';
 import { AboutComponent } from './about/about.component';
-import {RouterModule} from "@angular/router";
 import {FormsModule} from "@angular/forms";
 import {MatSelectModule} from "@angular/material/select";
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { GameComponent } from './game/game.component';
 import {MatRadioModule} from "@angular/material/radio";
+import {AppRoutingModule} from "./app-routing.module";
+//import { NgrxDemoComponent } from './ngrx-demo/ngrx-demo.component';
+//import { BookListEditComponent } from './ngrx-demo/book-list-edit/book-list-edit.component';
+//import {ngrxDemoReducer} from "./ngrx-demo/store/ngrx-demo.reducer";
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     CurrencyConvertComponent,
-    CurrencyChartComponent,
     AboutComponent,
-    GameComponent
+    GameComponent,
+   // NgrxDemoComponent,
+   // BookListEditComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot([
-      {path: 'currency-convert', component: CurrencyConvertComponent},
-      {path: 'currency-chart', component: CurrencyChartComponent},
-      {path: 'game', component: GameComponent},
-      {path: 'about', component: AboutComponent},
-      {path: '', redirectTo: '/currency-convert', pathMatch: 'full'},
-      {path: '**', component: CurrencyConvertComponent},
-    ]),
     FormsModule,
     MatSelectModule,
     NoopAnimationsModule,
-    MatRadioModule
+    MatRadioModule,
+    AppRoutingModule,
+   // StoreModule.forRoot({bookList: ngrxDemoReducer()})
   ],
   providers: [],
   bootstrap: [AppComponent]
